@@ -1,0 +1,17 @@
+<app-alerta [message]="message" *ngIf="message"></app-alerta>
+<div class="contenedor" >
+    <form (submit)="onSubmit($event)">
+        <div class="campo" >
+            <label for="city">Ciudad</label>
+            <input type="text" name="city" id="city" [(ngModel)]="busqueda.city">
+        </div>
+        <div class="campo">
+            <label for="country">País</label>
+            <select [(ngModel)]="busqueda.country" name="country" id="country">
+                <option value="">Seleccione un país</option>
+                <option *ngFor="let c of countries" [value]="c.id">{{c.country}}</option>
+            </select>
+        </div>
+        <input type="submit" value="Consultar Clima">
+    </form>
+</div>

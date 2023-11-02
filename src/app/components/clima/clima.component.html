@@ -1,0 +1,4 @@
+<main class="dos-columnas">
+    <app-formulario (showResultado)="getShowResult($event)"></app-formulario>
+    <app-resultado *ngIf="showResultado"></app-resultado>
+</main>

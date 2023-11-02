@@ -1,0 +1,14 @@
+<ng-container >
+    <app-spinner *ngIf="showSpinner; else climaa"></app-spinner>
+</ng-container>
+
+<ng-template #climaa >
+    <div class="contenedor clima">
+        <h2>El clima de {{resultado.name}} es: </h2>
+        <p>{{resultado.main.temp | temperatura }} <span>&#x2103;</span></p>
+        <div class="temp_min_max">
+            <p>Mín: {{resultado.main.temp_min | temperatura }} <span>&#x2103;</span></p>
+            <p>Máx: {{resultado.main.temp_max | temperatura }} <span>&#x2103;</span></p>
+        </div>
+    </div>
+</ng-template> 
